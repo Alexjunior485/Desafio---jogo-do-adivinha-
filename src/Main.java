@@ -1,15 +1,50 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+i       mport java.util.Random;
+import jav              a.  util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
-    }
+public class Main {
+        publ            ic static void main(String[] args) {
+                Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+        int numeroSorteado = random.nextInt(100) + 1; // Número entre 1 e 100
+        int palpite;
+        int tentativas = 0;
+
+        System.out.println("Bem-vindo ao jogo de adivinhação!");
+
+        do {
+            System.out.print("Digite seu palpite (entre 1 e 100): ");
+            palpite = scanner.nextInt();
+            tentativas++;
+
+            if (palpite == numeroSorteado) {
+                System.out.println("Parabéns! Você acertou em " + tentativas + " tentativas.");
+                break;
+            } else if (palpite < numeroSorteado) {
+                System.out.println("O número é maior.");
+            } else {
+                    System.out.println("O número é menor.");
 }
+        } while (true);
+
+               scanner.close();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
